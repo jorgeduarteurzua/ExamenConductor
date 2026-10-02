@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Práctica Examen Clase B · Chile</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- ENCABEZADO -->
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-icon">🚗</span>
+        <div>
+          <h1>Examen Clase B</h1>
+          <p class="brand-sub">Práctica · Chile</p>
+        </div>
+      </div>
+      <div id="timer" class="timer hidden" aria-live="polite">45:00</div>
+    </header>
+
+    <!-- PANTALLA DE INICIO -->
+    <section id="screen-start" class="screen">
+      <div class="card">
+        <h2>Prepárate para tu examen</h2>
+        <p class="lead">
+          Simula el examen teórico Clase B con las mismas reglas oficiales.
+        </p>
+        <ul class="rules">
+          <li><strong>35</strong> preguntas por intento</li>
+          <li><strong>3</strong> preguntas con doble puntuación (valen 2 puntos)</li>
+          <li>Puntaje máximo: <strong>38</strong> puntos</li>
+          <li>Mínimo para aprobar: <strong>33</strong> puntos</li>
+          <li>Tiempo máximo: <strong>45 minutos</strong></li>
+        </ul>
+        <div class="dif-select">
+          <span class="dif-label">Dificultad:</span>
+          <div class="dif-options" role="group" aria-label="Seleccionar dificultad">
+            <button type="button" class="dif-btn" data-dif="facil">Fácil</button>
+            <button type="button" class="dif-btn" data-dif="media">Media</button>
+            <button type="button" class="dif-btn" data-dif="dificil">Difícil</button>
+            <button type="button" class="dif-btn active" data-dif="mixto">Mixto</button>
+          </div>
+        </div>
+        <button id="btn-start" class="btn btn-primary btn-lg">Comenzar examen</button>
+        <button id="btn-stats-start" class="btn btn-ghost btn-lg">📊 Ver estadísticas e historial</button>
+        <p class="hint">Se eligen 35 preguntas al azar de un banco de 500, según la dificultad.</p>
+      </div>
+    </section>
+
+    <!-- PANTALLA DE EXAMEN -->
+    <section id="screen-exam" class="screen hidden">
+      <div class="exam-layout">
+        <main class="exam-main">
+          <div class="progress-row">
+            <span id="q-counter" class="q-counter">Pregunta 1 de 35</span>
+            <span id="q-tag" class="q-tag"></span>
+          </div>
+          <div class="progress-bar"><div id="progress-fill" class="progress-fill"></div></div>
+
+          <div class="card question-card">
+            <div id="q-image" class="q-image hidden"></div>
+            <p id="q-text" class="q-text"></p>
+            <div id="q-options" class="options"></div>
+          </div>
+
+          <div class="nav-row">
+            <button id="btn-prev" class="btn">◀ Anterior</button>
+            <button id="btn-next" class="btn">Siguiente ▶</button>
+            <button id="btn-finish" class="btn btn-primary">Terminar y corregir</button>
+          </div>
+        </main>
+
+        <aside class="exam-side">
+          <h3>Preguntas</h3>
+          <div id="question-grid" class="question-grid"></div>
+          <div class="legend">
+            <span><i class="dot dot-answered"></i> Respondida</span>
+            <span><i class="dot dot-current"></i> Actual</span>
+            <span><i class="dot dot-double"></i> Doble puntaje</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- PANTALLA DE RESULTADOS -->
+    <section id="screen-result" class="screen hidden">
+      <div class="card result-card">
+        <div id="result-badge" class="result-badge"></div>
+        <h2 id="result-title"></h2>
+        <p id="result-score" class="result-score"></p>
+        <div class="result-stats">
+          <div class="stat"><span id="stat-correct">0</span><small>Correctas</small></div>
+          <div class="stat"><span id="stat-wrong">0</span><small>Incorrectas</small></div>
+          <div class="stat"><span id="stat-blank">0</span><small>Sin responder</small></div>
+          <div class="stat"><span id="stat-time">0:00</span><small>Tiempo usado</small></div>
+        </div>
+        <div class="result-actions">
+          <button id="btn-review" class="btn">Revisar respuestas</button>
+          <button id="btn-stats-result" class="btn">Ver estadísticas</button>
+          <button id="btn-retry" class="btn btn-primary">Intentar de nuevo</button>
+        </div>
+      </div>
+
+      <div id="review" class="review hidden"></div>
+    </section>
+
+    <!-- PANTALLA DE ESTADÍSTICAS E HISTORIAL -->
+    <section id="screen-stats" class="screen hidden">
+      <div class="card">
+        <div class="stats-head">
+          <h2>Estadísticas e historial</h2>
+          <button id="btn-stats-back" class="btn">◀ Volver</button>
+        </div>
+
+        <div id="stats-empty" class="stats-empty hidden">
+          <p>Aún no tienes intentos guardados. Rinde un examen y verás aquí tu progreso y en qué temas fallas más.</p>
+        </div>
+
+        <div id="stats-content">
+          <!-- Resumen general -->
+          <div id="stats-summary" class="result-stats"></div>
+
+          <!-- Desempeño por tema -->
+          <h3 class="stats-subtitle">Aciertos por tema <small>(ordenado de peor a mejor)</small></h3>
+          <div id="stats-por-tema" class="bars"></div>
+
+          <!-- Desempeño por dificultad -->
+          <h3 class="stats-subtitle">Aciertos por dificultad</h3>
+          <div id="stats-por-dif" class="bars"></div>
+
+          <!-- Historial de intentos -->
+          <div class="stats-head">
+            <h3 class="stats-subtitle">Historial de intentos</h3>
+            <button id="btn-stats-clear" class="btn btn-danger">Borrar historial</button>
+          </div>
+          <div id="stats-historial" class="historial"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="signs.js"></script>
+  <script src="questions.js"></script>
+  <script src="generator.js"></script>
+  <script src="stats.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
