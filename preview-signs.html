@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vista previa de señales</title>
+  <style>
+    body { font-family: system-ui, sans-serif; background: #0f172a; color: #e2e8f0; padding: 20px; }
+    h1 { font-size: 20px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; }
+    .cell { background: #1e293b; border-radius: 12px; padding: 12px; text-align: center; }
+    .cell svg { width: 120px; height: 120px; }
+    .cell .name { margin-top: 8px; font-size: 12px; color: #94a3b8; font-family: monospace; }
+  </style>
+</head>
+<body>
+  <h1>Vista previa de todas las señales (signs.js)</h1>
+  <p>Esta página es solo para revisar cómo se ven las señales. No forma parte de la app.</p>
+  <div id="grid" class="grid"></div>
+
+  <script src="signs.js"></script>
+  <script>
+    const grid = document.getElementById("grid");
+    // Señales con valor (límite) se muestran con un ejemplo
+    const ejemplos = { limite: "60" };
+    Object.keys(window.SIGNS).forEach((nombre) => {
+      const cell = document.createElement("div");
+      cell.className = "cell";
+      const svg = window.renderImagen({ tipo: "svg", nombre, valor: ejemplos[nombre] });
+      cell.innerHTML = svg + `<div class="name">${nombre}</div>`;
+      grid.appendChild(cell);
+    });
+  </script>
+</body>
+</html>

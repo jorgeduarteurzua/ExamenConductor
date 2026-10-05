@@ -27,7 +27,7 @@ App web para practicar el examen teórico de conducir **Clase B** de Chile, con 
 ## Características
 
 - ⏱ Temporizador de 45 minutos con aviso en el último minuto y corrección automática al llegar a cero.
-- 🏦 Banco de **500 preguntas** (señales, normas, alcohol y drogas, conducción segura/defensiva, mecánica básica y frenado, documentación, convivencia vial, emergencias y primeros auxilios).
+- 🏦 Banco de **500 preguntas** que cubren todos los capítulos del Libro del Conductor: señales, normas, velocidad, alcohol, **drogas y estupefacientes**, **medicamentos**, **enfermedades y salud**, **fatiga y sueño**, **factores humanos (visión de túnel, estrés)**, conducción segura/defensiva, **conducción nocturna y con mal clima (niebla, nieve, hielo, aquaplaning)**, **cruces ferroviarios**, mecánica y frenado, documentación e infracciones, convivencia vial, emergencias y primeros auxilios.
 - 🎚 **Niveles de dificultad**: Fácil, Media, Difícil o Mixto. Cada pregunta tiene su nivel y el examen se arma según el que elijas.
 - 🖼 Preguntas **con imagen**: señales de tránsito e ilustraciones dibujadas con SVG (sin depender de archivos ni de internet).
 - 🔀 Las 35 preguntas se eligen al azar del banco en cada intento (sin repetir enunciados), y las opciones se barajan.

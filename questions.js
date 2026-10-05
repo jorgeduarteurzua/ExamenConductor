@@ -1288,6 +1288,464 @@ const QUESTION_BANK = [
     texto: "El objetivo final de todo conductor seguro es:",
     opciones: ["Llegar primero", "Llegar sano y salvo, sin poner en riesgo a nadie", "Ahorrar tiempo a toda costa", "Demostrar habilidad"],
     correcta: 1
+  },
+
+  // ===== SEÑALES DE TRÁNSITO CON IMAGEN ("La imagen corresponde a...") =====
+  {
+    id: 202, tema: "Señales",
+    texto: "La imagen que se presenta corresponde a la señal:",
+    opciones: ["No entrar / acceso prohibido", "Ceda el paso", "Estacionamiento permitido", "Vía preferente"],
+    correcta: 0,
+    dificultad: "facil",
+    imagen: { tipo: "svg", nombre: "noEntrar" }
+  },
+  {
+    id: 203, tema: "Señales",
+    texto: "La imagen que se presenta corresponde a la señal:",
+    opciones: ["Zona de estacionamiento", "Prohibido estacionar", "Peaje", "Fin de restricción"],
+    correcta: 1,
+    dificultad: "facil",
+    imagen: { tipo: "svg", nombre: "noEstacionar" }
+  },
+  {
+    id: 204, tema: "Señales",
+    texto: "La imagen que se presenta corresponde a la señal:",
+    opciones: ["Viraje obligatorio a la izquierda", "Prohibido virar a la izquierda", "Curva a la izquierda", "Doble sentido"],
+    correcta: 1,
+    dificultad: "media",
+    imagen: { tipo: "svg", nombre: "noVirarIzq" }
+  },
+  {
+    id: 205, tema: "Señales",
+    texto: "La imagen que se presenta corresponde a la señal:",
+    opciones: ["Cruce de peatones", "Prohibido el paso de peatones", "Zona de juegos", "Paradero"],
+    correcta: 1,
+    dificultad: "media",
+    imagen: { tipo: "svg", nombre: "noPeatones" }
+  },
+  {
+    id: 206, tema: "Señales",
+    texto: "La imagen que se presenta corresponde a una señal de advertencia de:",
+    opciones: ["Curva pronunciada a la derecha", "Prohibido girar a la derecha", "Vía sin salida", "Rotonda"],
+    correcta: 0,
+    dificultad: "media",
+    imagen: { tipo: "svg", nombre: "curvaDerecha" }
+  },
+  {
+    id: 207, tema: "Señales",
+    texto: "La imagen que se presenta corresponde a la señal de advertencia:",
+    opciones: ["Zona de juegos prohibida", "Niños / proximidad de escuela", "Fin de zona escolar", "Peatones prohibidos"],
+    correcta: 1,
+    dificultad: "facil",
+    imagen: { tipo: "svg", nombre: "ninos" }
+  },
+  {
+    id: 208, tema: "Señales",
+    texto: "La imagen que se presenta corresponde a la señal de advertencia:",
+    opciones: ["Granja cercana", "Animales en el camino", "Prohibido el paso de animales", "Zona de pastoreo"],
+    correcta: 1,
+    dificultad: "media",
+    imagen: { tipo: "svg", nombre: "animales" }
+  },
+  {
+    id: 209, tema: "Señales",
+    texto: "La imagen que se presenta corresponde a la señal de advertencia:",
+    opciones: ["Badén o resalto (lomo de toro)", "Puente angosto", "Pendiente pronunciada", "Zona de derrumbes"],
+    correcta: 0,
+    dificultad: "media",
+    imagen: { tipo: "svg", nombre: "baden" }
+  },
+  {
+    id: 210, tema: "Señales",
+    texto: "La imagen que se presenta advierte que más adelante hay:",
+    opciones: ["Un semáforo", "Un peaje", "Una estación de servicio", "Un hospital"],
+    correcta: 0,
+    dificultad: "facil",
+    imagen: { tipo: "svg", nombre: "semaforoAdelante" }
+  },
+  {
+    id: 211, tema: "Señales",
+    texto: "La imagen que se presenta corresponde a la señal de advertencia:",
+    opciones: ["Cruce o intersección", "Hospital", "Zona de iglesia", "Fin de camino"],
+    correcta: 0,
+    dificultad: "media",
+    imagen: { tipo: "svg", nombre: "cruce" }
+  },
+  {
+    id: 212, tema: "Señales",
+    texto: "La imagen que se presenta (señal informativa) indica la proximidad de:",
+    opciones: ["Un hospital o centro asistencial", "Una farmacia", "Un cruce ferroviario", "Una zona de camping"],
+    correcta: 0,
+    dificultad: "facil",
+    imagen: { tipo: "svg", nombre: "hospital" }
+  },
+  {
+    id: 213, tema: "Señales",
+    texto: "La imagen que se presenta corresponde a la señal:",
+    opciones: ["Prohibido estacionar", "Estacionamiento permitido", "Parada de buses", "Peaje"],
+    correcta: 1,
+    dificultad: "facil",
+    imagen: { tipo: "svg", nombre: "estacionamiento" }
+  },
+  {
+    id: 214, tema: "Señales",
+    texto: "La imagen que se presenta (señal de obligación) indica:",
+    opciones: ["Prohibido seguir derecho", "Sentido obligatorio: siga derecho", "Fin de vía", "Ceda el paso"],
+    correcta: 1,
+    dificultad: "media",
+    imagen: { tipo: "svg", nombre: "sentidoObligatorio" }
+  },
+  {
+    id: 215, tema: "Señales",
+    texto: "La imagen que se presenta corresponde a la señal:",
+    opciones: ["Ceda el paso", "Pare / detención obligatoria", "No entrar", "Prohibido adelantar"],
+    correcta: 1,
+    dificultad: "facil",
+    imagen: { tipo: "svg", nombre: "pare" }
+  },
+  {
+    id: 216, tema: "Señales",
+    texto: "La imagen que se presenta corresponde a la señal:",
+    opciones: ["Pare", "Ceda el paso", "Prohibido estacionar", "Velocidad mínima"],
+    correcta: 1,
+    dificultad: "facil",
+    imagen: { tipo: "svg", nombre: "ceda" }
+  },
+  {
+    id: 217, tema: "Señales",
+    texto: "La imagen que se presenta corresponde a la señal:",
+    opciones: ["Prohibido adelantar o rebasar", "Doble sentido de tránsito", "Prohibido estacionar", "Camino resbaladizo"],
+    correcta: 0,
+    dificultad: "media",
+    imagen: { tipo: "svg", nombre: "noAdelantar" }
+  },
+  {
+    id: 218, tema: "Señales",
+    texto: "La imagen que se presenta corresponde a una señal que advierte:",
+    opciones: ["Un peligro no especificado; conduzca con precaución", "Una prohibición", "Un servicio turístico", "Vía preferente"],
+    correcta: 0,
+    dificultad: "facil",
+    imagen: { tipo: "svg", nombre: "advertencia" }
+  },
+  {
+    id: 219, tema: "Señales",
+    texto: "La imagen que se presenta (señal informativa azul) indica:",
+    opciones: ["Prohibido el paso de peatones", "Cruce o zona de peatones", "Fin de acera", "Zona de carga"],
+    correcta: 1,
+    dificultad: "facil",
+    imagen: { tipo: "svg", nombre: "peatonal" }
+  },
+  {
+    id: 220, tema: "Señales",
+    texto: "La imagen que se presenta corresponde a una señal reglamentaria de:",
+    opciones: ["Prohibición (círculo rojo con barra diagonal)", "Advertencia", "Información", "Obligación"],
+    correcta: 0,
+    dificultad: "media",
+    imagen: { tipo: "svg", nombre: "prohibido" }
+  },
+  {
+    id: 221, tema: "Señales",
+    texto: "La imagen que se presenta corresponde a la señal:",
+    opciones: ["Velocidad mínima de 80 km/h", "Límite máximo de 80 km/h", "Ruta 80", "Distancia de 80 metros"],
+    correcta: 1,
+    dificultad: "facil",
+    imagen: { tipo: "svg", nombre: "limite", valor: "80" }
+  },
+
+  // ===== AMPLIACIÓN BASADA EN EL LIBRO DEL CONDUCTOR (CONASET) =====
+
+  // --- Drogas y estupefacientes ---
+  {
+    id: 222, tema: "Drogas", dificultad: "media",
+    texto: "¿Cuál es el principal riesgo de conducir bajo el efecto de drogas?",
+    opciones: ["Ninguno si es poca cantidad", "Actúan sobre el cerebro y alteran percepción, atención, coordinación y tiempo de reacción", "Solo afectan de noche", "Mejoran la concentración"],
+    correcta: 1
+  },
+  {
+    id: 223, tema: "Drogas", dificultad: "media",
+    texto: "La marihuana, respecto a la conducción, principalmente:",
+    opciones: ["Mejora los reflejos", "Altera la percepción, aumenta el tiempo de reacción y produce somnolencia", "No tiene efectos", "Es un estimulante seguro"],
+    correcta: 1
+  },
+  {
+    id: 224, tema: "Drogas", dificultad: "media",
+    texto: "La cocaína es un estimulante que al conducir puede provocar:",
+    opciones: ["Conducción más tranquila", "Comportamiento competitivo o agresivo y mayor distracción", "Mejor cálculo de distancias", "Ningún efecto"],
+    correcta: 1
+  },
+  {
+    id: 225, tema: "Drogas", dificultad: "facil",
+    texto: "Si has consumido cualquier droga, lo correcto es:",
+    opciones: ["Conducir con cuidado", "No conducir, ya que todo consumo implica un riesgo", "Esperar 10 minutos y conducir", "Conducir solo distancias cortas"],
+    correcta: 1
+  },
+  {
+    id: 226, tema: "Drogas", dificultad: "dificil",
+    texto: "Esperar a que 'pasen' los efectos de una droga antes de conducir:",
+    opciones: ["Garantiza conducir seguro", "No es garantía de poder conducir de forma segura", "Elimina todo riesgo", "Solo aplica al alcohol"],
+    correcta: 1
+  },
+  {
+    id: 227, tema: "Drogas", dificultad: "dificil",
+    texto: "El consumo de éxtasis al conducir puede provocar, entre otros efectos:",
+    opciones: ["Mejor visión nocturna", "Mayor sensibilidad a la luz, deslumbramientos e ilusiones ópticas", "Mayor coordinación", "Reflejos más rápidos"],
+    correcta: 1
+  },
+
+  // --- Visión de túnel y capacidad visual ---
+  {
+    id: 228, tema: "Factores humanos", dificultad: "dificil",
+    texto: "El fenómeno de 'visión de túnel' consiste en que:",
+    opciones: ["Se ve mejor de noche", "El campo visual se reduce a medida que aumenta la velocidad", "Mejora la visión lateral", "Se agranda el campo visual"],
+    correcta: 1
+  },
+  {
+    id: 229, tema: "Factores humanos", dificultad: "dificil",
+    texto: "Además de la alta velocidad, la visión de túnel también se presenta por:",
+    opciones: ["Buen descanso", "Estrés y consumo de medicamentos o drogas", "Conducir de día", "Usar cinturón"],
+    correcta: 1
+  },
+  {
+    id: 230, tema: "Factores humanos", dificultad: "media",
+    texto: "Al conducir en la oscuridad, aunque no mires directamente los focos del vehículo que viene de frente:",
+    opciones: ["No ocurre nada", "Pueden presentarse efectos de ceguera temporal por reflejos de luz en el ojo", "Mejora tu visión", "Ves mejor los colores"],
+    correcta: 1
+  },
+  {
+    id: 231, tema: "Factores humanos", dificultad: "media",
+    texto: "En condiciones de niebla u oscuridad, el tránsito que viene en sentido contrario tiende a:",
+    opciones: ["Verse más cerca", "Parecer que está más lejos de lo que realmente está", "Verse igual que de día", "Desaparecer"],
+    correcta: 1
+  },
+
+  // --- Enfermedades en la conducción ---
+  {
+    id: 232, tema: "Salud y conducción", dificultad: "media",
+    texto: "Si una enfermedad o condición puede afectar tu conducción, lo responsable es:",
+    opciones: ["Ignorarlo", "Consultar al médico sobre los riesgos y precauciones de conducir", "Conducir solo de día", "Dejar de usar la licencia"],
+    correcta: 1
+  },
+  {
+    id: 233, tema: "Salud y conducción", dificultad: "dificil",
+    texto: "Según el libro, los grupos de enfermedades con mayor riesgo para la conducción son:",
+    opciones: ["Solo resfríos", "Trastornos neurológicos, adicciones y diabetes", "Ninguna enfermedad influye", "Solo problemas de piel"],
+    correcta: 1
+  },
+  {
+    id: 234, tema: "Salud y conducción", dificultad: "media",
+    texto: "Durante un estornudo de un segundo a 90 km/h, el vehículo recorre sin atención a la vía aproximadamente:",
+    opciones: ["5 metros", "25 metros", "1 metro", "50 metros"],
+    correcta: 1
+  },
+  {
+    id: 235, tema: "Salud y conducción", dificultad: "facil",
+    texto: "Si no te sientes bien de salud antes de conducir, debes:",
+    opciones: ["Conducir igual", "No conducir", "Conducir más rápido para llegar antes", "Tomar un café y conducir"],
+    correcta: 1
+  },
+
+  // --- Medicamentos ---
+  {
+    id: 236, tema: "Medicamentos", dificultad: "dificil",
+    texto: "Según el libro, conducir bajo los efectos de ciertos antihistamínicos equivale a hacerlo con una alcoholemia de:",
+    opciones: ["0,0 g/L", "0,5 a 0,8 g/L", "0,1 g/L", "Más de 2,0 g/L"],
+    correcta: 1
+  },
+  {
+    id: 237, tema: "Medicamentos", dificultad: "media",
+    texto: "Antes de conducir habiendo tomado un medicamento que produce somnolencia, lo recomendable es:",
+    opciones: ["Conducir normalmente", "Consultar al médico sobre sus efectos y no conducir si afecta tus capacidades", "Tomar el doble de dosis", "Conducir solo en ciudad"],
+    correcta: 1
+  },
+  {
+    id: 238, tema: "Medicamentos", dificultad: "media",
+    texto: "Mezclar antihistamínicos con alcohol u otros medicamentos:",
+    opciones: ["No tiene riesgo", "Puede producir efectos no deseados y es peligroso", "Mejora el efecto", "Es recomendable"],
+    correcta: 1
+  },
+  {
+    id: 239, tema: "Medicamentos", dificultad: "media",
+    texto: "Los psicofármacos (ansiolíticos, sedantes, antidepresivos) al conducir:",
+    opciones: ["No afectan", "Pueden alterar las capacidades para una conducción segura", "Mejoran los reflejos", "Solo afectan a mayores de edad"],
+    correcta: 1
+  },
+
+  // --- Cansancio, sueño y fatiga ---
+  {
+    id: 240, tema: "Fatiga y sueño", dificultad: "media",
+    texto: "El cansancio y el sueño al conducir principalmente:",
+    opciones: ["Mejoran la atención", "Aumentan el tiempo de reacción y las distracciones", "No influyen de día", "Solo afectan en carretera"],
+    correcta: 1
+  },
+  {
+    id: 241, tema: "Fatiga y sueño", dificultad: "media",
+    texto: "¿En qué situación favorece más la aparición de somnolencia al volante?",
+    opciones: ["Ciudad con mucho tráfico", "Carretera recta, monótona y sin tráfico", "Lluvia intensa", "Zona escolar"],
+    correcta: 1
+  },
+  {
+    id: 242, tema: "Fatiga y sueño", dificultad: "facil",
+    texto: "¿Es cierto que el sueño al conducir solo aparece de noche?",
+    opciones: ["Sí, solo de noche", "No, el sueño puede aparecer también de día por muchas causas", "Solo en invierno", "Solo después de comer"],
+    correcta: 1
+  },
+  {
+    id: 243, tema: "Fatiga y sueño", dificultad: "facil",
+    texto: "Ante los primeros signos de sueño o fatiga al conducir, lo correcto es:",
+    opciones: ["Acelerar para llegar antes", "Detenerse en un lugar seguro y descansar", "Abrir la ventana y seguir", "Beber alcohol"],
+    correcta: 1
+  },
+
+  // --- Equilibrio emocional y estrés ---
+  {
+    id: 244, tema: "Factores humanos", dificultad: "media",
+    texto: "Un nivel de estrés demasiado alto al conducir puede provocar:",
+    opciones: ["Mejor desempeño siempre", "Reacciones impulsivas y reducción del campo de atención", "Más seguridad", "Ningún efecto"],
+    correcta: 1
+  },
+  {
+    id: 245, tema: "Factores humanos", dificultad: "media",
+    texto: "Una persona con depresión, respecto a la conducción, debería evitar:",
+    opciones: ["Conducir siempre", "Conducir de noche, por mucho tiempo o en entornos monótonos", "Usar el cinturón", "Conducir acompañada"],
+    correcta: 1
+  },
+
+  // --- Conducción en la oscuridad ---
+  {
+    id: 246, tema: "Conducción segura", dificultad: "media",
+    texto: "Si otro vehículo te encandila de frente con sus luces, debes:",
+    opciones: ["Mirar directo a sus luces", "Dirigir la mirada al borde derecho de tu pista y reducir la velocidad", "Encender tus luces altas", "Acelerar"],
+    correcta: 1
+  },
+  {
+    id: 247, tema: "Conducción segura", dificultad: "media",
+    texto: "¿Qué luces se deben usar de noche en los caminos y vías interurbanas (fuera de ciudad)?",
+    opciones: ["Luces bajas", "Luces altas, bajándolas al cruzarse con otro vehículo", "Ninguna", "Solo las balizas"],
+    correcta: 1
+  },
+  {
+    id: 248, tema: "Mecánica básica", dificultad: "media",
+    texto: "Las luces neblineras (antiniebla) deben usarse:",
+    opciones: ["Siempre", "Solo cuando la visibilidad está muy reducida por niebla o lluvia intensa, apagándolas al mejorar", "De día", "Para adelantar"],
+    correcta: 1
+  },
+
+  // --- Condiciones climáticas ---
+  {
+    id: 249, tema: "Clima", dificultad: "media",
+    texto: "¿Por qué conviene no usar luces altas cuando hay niebla o nieve?",
+    opciones: ["Gastan batería", "La luz se refleja en las partículas y encandila al propio conductor", "Son ilegales", "No iluminan nada"],
+    correcta: 1
+  },
+  {
+    id: 250, tema: "Clima", dificultad: "dificil",
+    texto: "Con la calzada cubierta de hielo, la distancia de frenado puede aumentar hasta:",
+    opciones: ["El doble", "Hasta 10 veces", "No cambia", "La mitad"],
+    correcta: 1
+  },
+  {
+    id: 251, tema: "Clima", dificultad: "media",
+    texto: "El 'aquaplaning' (hidroplaneo) se produce cuando:",
+    opciones: ["El motor se recalienta", "Una capa de agua se interpone entre los neumáticos y la calzada y el vehículo pierde adherencia", "Se acaba el combustible", "Hace mucho calor"],
+    correcta: 1
+  },
+  {
+    id: 252, tema: "Clima", dificultad: "media",
+    texto: "La mejor forma de evitar el aquaplaning es:",
+    opciones: ["Acelerar", "Moderar la velocidad para que los neumáticos desalojen el agua", "Frenar fuerte", "Inflar menos los neumáticos"],
+    correcta: 1
+  },
+  {
+    id: 253, tema: "Clima", dificultad: "facil",
+    texto: "Cuando caen las primeras gotas de lluvia (o copos de nieve), la calzada es especialmente peligrosa porque:",
+    opciones: ["Se ve mejor", "Se mezclan con polvo y aceite y la vuelven muy resbaladiza", "Mejora el agarre", "No pasa nada"],
+    correcta: 1
+  },
+  {
+    id: 254, tema: "Clima", dificultad: "media",
+    texto: "Al conducir con nieve o hielo, lo recomendable es:",
+    opciones: ["Movimientos bruscos del volante", "Conducir lento y suave, sin frenadas ni giros bruscos, aumentando la distancia", "Frenar y girar a la vez", "Acelerar en las curvas"],
+    correcta: 1
+  },
+
+  // --- Cruces ferroviarios ---
+  {
+    id: 255, tema: "Normas", dificultad: "media",
+    texto: "En un cruce ferroviario, la preferencia de paso la tiene siempre:",
+    opciones: ["El vehículo", "El tren", "El que llegue primero", "El vehículo más grande"],
+    correcta: 1
+  },
+  {
+    id: 256, tema: "Normas", dificultad: "dificil",
+    texto: "Un tren que circula a 100 km/h necesita para detenerse aproximadamente:",
+    opciones: ["50 metros", "Entre 800 y 1.000 metros", "100 metros", "10 metros"],
+    correcta: 1
+  },
+  {
+    id: 257, tema: "Normas", dificultad: "media",
+    texto: "Antes de cruzar una vía férrea, además de mirar a ambos lados conviene:",
+    opciones: ["Subir la música", "Apagar la radio para poder escuchar", "Acelerar al máximo", "Tocar la bocina"],
+    correcta: 1
+  },
+  {
+    id: 258, tema: "Normas", dificultad: "dificil",
+    texto: "Si tu vehículo se detiene (queda detenido) sobre un cruce ferroviario y no hay tren a la vista, lo primero es:",
+    opciones: ["Esperar dentro del auto", "Hacer salir a todas las personas del vehículo", "Revisar el motor con calma", "Llamar por teléfono sin bajarse"],
+    correcta: 1
+  },
+  {
+    id: 259, tema: "Normas", dificultad: "media",
+    texto: "En un cruce ferroviario, la luz roja (o dos luces rojas intermitentes) indica:",
+    opciones: ["Que puedes pasar", "La proximidad de un tren; no debes cruzar", "Fin de la vía férrea", "Zona de estacionamiento"],
+    correcta: 1
+  },
+
+  // --- Conducción con carga ---
+  {
+    id: 260, tema: "Conducción segura", dificultad: "dificil",
+    texto: "Con una carga pesada en la parte trasera del automóvil, el comportamiento típico es que:",
+    opciones: ["El volante se siente más pesado", "El volante se siente más liviano y el vehículo tiende a girar más de lo esperado", "No cambia nada", "Frena mejor"],
+    correcta: 1
+  },
+  {
+    id: 261, tema: "Conducción segura", dificultad: "media",
+    texto: "Para una conducción más estable, la carga del vehículo debería:",
+    opciones: ["Ir toda atrás", "Distribuirse de forma uniforme y bien asegurada", "Ir suelta", "Ir sobre el techo sin sujetar"],
+    correcta: 1
+  },
+
+  // --- Leyes físicas / energía ---
+  {
+    id: 262, tema: "Conducción segura", dificultad: "dificil",
+    texto: "La fuerza centrífuga que tiende a sacar al vehículo de una curva depende de:",
+    opciones: ["El color del auto", "La velocidad y de lo cerrada que sea la curva", "La hora del día", "La marca de los neumáticos"],
+    correcta: 1
+  },
+  {
+    id: 263, tema: "Mecánica básica", dificultad: "media",
+    texto: "Unos amortiguadores en mal estado pueden provocar:",
+    opciones: ["Mejor estabilidad", "Pérdida de estabilidad en curvas y mayor distancia de frenado", "Menor consumo", "Más velocidad"],
+    correcta: 1
+  },
+  {
+    id: 264, tema: "Mecánica básica", dificultad: "dificil",
+    texto: "Conducir con el portaequipaje (maletero) abierto o con fallas en el escape puede causar:",
+    opciones: ["Nada", "Intoxicación por monóxido de carbono (dolor de cabeza, vómitos)", "Más potencia", "Mejor ventilación"],
+    correcta: 1
+  },
+
+  // --- Infracciones gravísimas (ampliación legal del libro) ---
+  {
+    id: 265, tema: "Documentación", dificultad: "dificil",
+    texto: "¿Cuál de las siguientes es una infracción gravísima según la Ley de Tránsito?",
+    opciones: ["Estacionar mal", "Exceder en más de 20 km/h el límite de velocidad máxima", "No usar intermitente", "Tocar la bocina"],
+    correcta: 1
+  },
+  {
+    id: 266, tema: "Documentación", dificultad: "media",
+    texto: "No detenerse ante una luz roja del semáforo o ante una señal PARE se considera:",
+    opciones: ["Una falta leve", "Una infracción gravísima", "Algo sin sanción", "Una recomendación"],
+    correcta: 1
   }
 ];
 
